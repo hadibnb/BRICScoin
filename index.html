@@ -1,151 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>BRICS Coin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background: linear-gradient(45deg, 
-        rgba(0, 153, 51, 0.2),   
-        rgba(0, 57, 166, 0.2),  
-        rgba(255, 153, 51, 0.2),
-        rgba(222, 41, 16, 0.2), 
-        rgba(0, 119, 73, 0.2),  
-        rgba(206,17,38,0.2)     
-      );
-      background-size: 300% 300%;
-      animation: gradient 12s ease infinite;
-      color: #111;
-      padding: 20px;
-    }
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    h1 {
-      font-size: 3em;
-      font-weight: bold;
-      color: #d32f2f;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    }
-    h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
-    }
-    h3 {
-      margin: 30px 0 10px;
-      font-size: 1.8em;
-      font-weight: bold;
-    }
-    p {
-      max-width: 900px;
-      margin: 0 auto 20px;
-      line-height: 1.6;
-      font-size: 1.1em;
-    }
-    .flags {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 20px;
-      justify-items: center;
-      margin: 30px auto;
-      max-width: 900px;
-    }
-    .flags img {
-      width: 100px;
-      height: auto;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .socials {
-      margin-top: 40px;
-    }
-    .socials a {
-      margin: 0 10px;
-      display: inline-block;
-    }
-    .socials img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      transition: transform 0.2s;
-    }
-    .socials img:hover {
-      transform: scale(1.2);
-    }
-    hr {
-      margin: 20px 0;
-      border: none;
-    }
-  </style>
+  <title>BRICScoin Foundation</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const userLang = navigator.language || navigator.userLanguage;
+      const lang = userLang.substring(0, 2);
+      const supported = ["en","pt","ru","hi","zh","fa","ar"];
+      const chosen = supported.includes(lang) ? lang : "en";
+      window.location.href = chosen + "/index.html";
+    });
+  </script>
 </head>
 <body>
-
-  <h1>B R I C S coin</h1>
-  <h2>BRICS coin foundation</h2>
-  <p><em>A new cryptocurrency for a new world of business.</em></p>
-
-  <div class="flags">
-    <img src="https://flagcdn.com/w320/br.png" alt="Brazil">
-    <img src="https://flagcdn.com/w320/ru.png" alt="Russia">
-    <img src="https://flagcdn.com/w320/in.png" alt="India">
-    <img src="https://flagcdn.com/w320/cn.png" alt="China">
-    <img src="https://flagcdn.com/w320/za.png" alt="South Africa">
-    <img src="https://flagcdn.com/w320/ir.png" alt="Iran">
-    <img src="https://flagcdn.com/w320/sa.png" alt="Saudi Arabia">
-    <img src="https://flagcdn.com/w320/eg.png" alt="Egypt">
-    <img src="https://flagcdn.com/w320/et.png" alt="Ethiopia">
-    <img src="https://flagcdn.com/w320/ae.png" alt="UAE">
-    <img src="https://flagcdn.com/w320/id.png" alt="Indonesia">
-  </div>
-
-  <hr><hr><hr><hr>
-
-  <h3>Fixed Value</h3>
-  <hr>
-  <h3>Convertible only with the official and exclusive cryptocurrency of the BRICS member countries.</h3>
-  <hr><hr><hr>
-
-  <h3>Price</h3>
-  <hr><hr>
-  <p>
-    The price of BRICS is equal to <strong>100 BRICS units for every 2,100 Chinese yuan</strong> 
-    or <strong>100 BRICS units for every 1,100 UAE dirhams</strong>, 
-    but currently you will receive <strong>100 BRICS units for every 5 dollars</strong> until <strong>January 21, 2026</strong>, 
-    and from <strong>January 22, 2026</strong>, the price of BRICS will return to <strong>11 UAE dirhams</strong> or <strong>21 Chinese yuan</strong>.
-  </p>
-
-  <hr><hr><hr><hr>
-
-  <h3>How to get BRICS?</h3>
-  <hr>
-  <p><strong>Just add the BRICS contract address to your wallet and then send bnb to the BRICS contract address.
-  You will receive the BRICS immediately.</strong></p>
-  <hr><hr>
-  <p><strong>BRICS contract address :</strong><br>0xAF2009350F6ECBE22c23A505a590239c7aaA3037</p>
-
-  <div class="socials">
-    <a href="https://instagram.com/bricscoininfo" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-    </a>
-    <a href="https://youtube.com/@bricscoinnews" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111748.png" alt="YouTube">
-    </a>
-    <a href="https://x.com/bricsunion" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968958.png" alt="X">
-    </a>
-    <a href="https://facebook.com/bricscoininfo" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-    </a>
-    <a href="https://discord.gg/yXA32kuk" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
-    </a>
-  </div>
-
+  Redirecting to your language version...
 </body>
 </html>
