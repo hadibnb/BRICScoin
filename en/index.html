@@ -1,41 +1,212 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Official BRICS Coin — A New International Digital Currency for the BRICS Nations</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BRICS Coin — International</title>
+  <meta name="description" content="BRICS Coin - multi-language single page site. Buy BRICS, view contract and contact the team." />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top left, #f0f0f0, #dcdcdc);
-      text-align: center;
-      padding: 40px;
-    }
-    img {
-      width: 200px;
-      margin-bottom: 30px;
-    }
-    h1 {
-      color: #333;
-      font-size: 2em;
-    }
-    p {
-      color: #555;
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: auto;
-    }
-    footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #777;
-    }
+    :root{--bg:#f7fbff;--card:#ffffff;--accent:#0b76ff;--muted:#6b7280}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;margin:0;background:linear-gradient(180deg,#f0f8ff 0%,var(--bg) 100%);color:#0b1220}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:rgba(255,255,255,0.6);backdrop-filter:blur(6px)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,#ddd,#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#b8860b}
+    nav a{margin-left:14px;color:var(--accent);text-decoration:none;font-weight:600}
+    main{max-width:1100px;margin:28px auto;padding:20px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(14,30,37,0.06)}
+    h1{margin:0 0 8px 0;font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 16px}
+    .buy-box{display:flex;flex-direction:column;gap:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid #e6eefc;color:var(--accent)}
+    .field{display:flex;gap:8px;align-items:center}
+    label{font-size:13px;color:var(--muted)}
+    input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc}
+    footer{max-width:1100px;margin:28px auto;padding:18px;text-align:center;color:var(--muted)}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .lang-switch{display:flex;gap:8px}
+    .contract{word-break:break-all;font-size:13px;background:#fbfdff;padding:10px;border-radius:8px}
+    .socials a{display:inline-block;margin-right:8px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr} .logo{width:40px;height:40px}}
   </style>
 </head>
 <body>
-  <img src="../logo.webp" alt="BRICS Coin Logo">
-  <h1>Official BRICS Coin — A New International Digital Currency for the BRICS Nations</h1>
-  <p>The BRICScoin Foundation introduces a new digital currency to strengthen financial cooperation among BRICS countries.</p>
-  <footer>© 2025 BRICScoin Foundation — All Rights Reserved</footer>
+  <header>
+    <div class="brand">
+      <div class="logo">BRICS</div>
+      <div>
+        <div style="font-weight:800">BRICS Coin</div>
+        <div style="font-size:12px;color:var(--muted)">International Token — Multi-language</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#buy">Buy / Sell</a>
+      <a href="#contract">Contract</a>
+      <a href="#socials">Socials</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card">
+        <h1 id="title">BRICS Coin — پول بین‌المللی اعضای BRICS</h1>
+        <p class="lead">این صفحه چند زبانه برای نمایش اطلاعات توکن BRICS طراحی شده. می‌توانید روی دکمه خرید بزنید تا وارد PancakeSwap یا هر صرافی مبتنی بر BSC شوید و خرید کنید. همچنین بخش تماس برای پیام‌ها فعال است.</p>
+
+        <h3>ویژگی‌ها</h3>
+        <ul>
+          <li>نماد: <strong id="symbol">BRICS</strong></li>
+          <li>شبکه: <strong id="network">BSC (BNB Chain)</strong></li>
+          <li>اعشار: <strong id="decimals">6</strong></li>
+          <li>عرضه کل: <strong id="supply">10,000,000,000</strong></li>
+        </ul>
+
+        <h3 id="buy">بخش خرید / فروش</h3>
+        <div class="buy-box">
+          <!-- NOTE: Replace CONTRACT_ADDRESS with your actual contract address (0x... ) -->
+          <div class="field">
+            <label for="contract_input">Contract Address:</label>
+            <input id="contract_input" type="text" value="REPLACE_WITH_CONTRACT_ADDRESS" />
+          </div>
+
+          <div>
+            <a id="open_swap" class="btn" target="_blank" rel="noopener">باز کردن در PancakeSwap (Swap)</a>
+            <a id="open_add" class="btn ghost" target="_blank" rel="noopener">باز کردن صفحه Add Liquidity</a>
+          </div>
+
+          <div style="font-size:13px;color:var(--muted)">توضیح: دکمه Swap کاربران را به صفحه تعویض PancakeSwap هدایت می‌کند. برای فروش و خرید مستقیم کافیست کاربر مقدار را وارد کند. دکمه Add Liquidity برای اضافه کردن نقدینگی است (در صورت نیاز شما یا تیم).</div>
+        </div>
+
+        <h3 id="contract">قرار داد</h3>
+        <div class="contract">آدرس قرارداد: <span id="contract_display">REPLACE_WITH_CONTRACT_ADDRESS</span></div>
+
+        <h3 style="margin-top:14px">راهنمای اضافه کردن لوگو</h3>
+        <p style="font-size:13px;color:var(--muted)">برای نمایش لوگو در سایت‌های لیستینگ و کیف‌پول‌ها (مثلاً BscScan یا PancakeSwap)، شما نیاز به آپلود تصویر لوگو در پنل آن سرویس یا ثبت اکانت GitHub Pages دارید. این سایت از مسیر <code>/assets/logo.png</code> استفاده می‌کند — اگر لوگو را دارید، فایل را جایگزین کنید.</p>
+      </div>
+
+      <aside class="card">
+        <h3>سریع — وضعیت نقدینگی</h3>
+        <div style="font-size:14px;color:var(--muted);margin-bottom:8px">برای دیدن وضعیت لحظه‌ای استخر، لینک زیر را وارد کنید:</div>
+        <div class="field"><input id="pair_input" type="text" value="REPLACE_WITH_PAIR_ADDRESS_OR_LEAVE_BLANK" /></div>
+        <div style="margin-top:10px"><a id="open_pancake_pair" class="btn ghost" target="_blank">باز کردن صفحه استخر در PancakeSwap</a></div>
+
+        <hr style="margin:12px 0" />
+        <div>
+          <strong>Quick links</strong>
+          <div style="margin-top:8px;display:flex;flex-direction:column;gap:8px">
+            <a id="poocoin_link" class="btn ghost" target="_blank">مشاهده در Poocoin</a>
+            <a id="dextools_link" class="btn ghost" target="_blank">مشاهده در Dextools</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card" id="socials" style="margin-top:18px">
+      <h3>ارتباط با ما — Socials</h3>
+      <p class="lead">لطفا هر پیامی داشتید از طریق شبکه‌های زیر با تیم BRICS ارتباط بگیرید.</p>
+      <div class="row socials">
+        <a id="tg_link" href="#" target="_blank">Telegram</a>
+        <a id="twitter_link" href="#" target="_blank">Twitter / X</a>
+        <a id="discord_link" href="#" target="_blank">Discord</a>
+        <a id="email_link" href="mailto:contact@yourdomain.tld">Email</a>
+      </div>
+
+      <div style="margin-top:12px">
+        <h4>ارسال پیام مستقیم</h4>
+        <form id="contact_form" onsubmit="return onContact(event)">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <input id="name" type="text" placeholder="Name (optional)" />
+            <input id="email" type="text" placeholder="Your email" />
+            <textarea id="message" placeholder="پیام شما..." style="min-height:80px;padding:10px;border-radius:8px;border:1px solid #e6eefc"></textarea>
+            <div style="display:flex;gap:8px"><button class="btn" type="submit">ارسال پیام</button><button id="clear" type="button" class="btn ghost">پاک کردن</button></div>
+            <div id="contact_result" style="font-size:13px;color:var(--muted)"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © BRICS Coin — Multi-language site. Built by the BRICS team. For token purchases, always verify the contract address and use official links.
+  </footer>
+
+  <script>
+    // Replace this with your contract and pair addresses.
+    const DEFAULT_CONTRACT = 'REPLACE_WITH_CONTRACT_ADDRESS';
+    const DEFAULT_PAIR = '';
+
+    function contractAddress(){
+      const el = document.getElementById('contract_input');
+      return (el && el.value && el.value !== 'REPLACE_WITH_CONTRACT_ADDRESS') ? el.value.trim() : DEFAULT_CONTRACT;
+    }
+
+    function pairAddress(){
+      const el = document.getElementById('pair_input');
+      return (el && el.value && el.value !== 'REPLACE_WITH_PAIR_ADDRESS_OR_LEAVE_BLANK') ? el.value.trim() : DEFAULT_PAIR;
+    }
+
+    function openUrl(url){ window.open(url, '_blank'); }
+
+    // Build PancakeSwap swap & add URLs
+    function pancakeSwapUrl(contract){
+      if(!contract || contract.indexOf('0x')!==0) return 'https://pancakeswap.finance/swap';
+      return `https://pancakeswap.finance/swap?outputCurrency=${contract}`;
+    }
+    function pancakeAddUrl(contract){
+      if(!contract || contract.indexOf('0x')!==0) return 'https://pancakeswap.finance/add';
+      // For Add, pair with WBNB (wrapped BNB). Use WBNB address on BSC mainnet.
+      const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+      return `https://pancakeswap.finance/add/${WBNB}/${contract}`;
+    }
+
+    document.getElementById('open_swap').addEventListener('click',()=>{
+      const c = contractAddress();
+      openUrl(pancakeSwapUrl(c));
+    });
+    document.getElementById('open_add').addEventListener('click',()=>{
+      const c = contractAddress();
+      openUrl(pancakeAddUrl(c));
+    });
+
+    document.getElementById('open_pancake_pair').addEventListener('click',()=>{
+      const p = pairAddress();
+      if(p && p.startsWith('0x')) openUrl('https://pancakeswap.finance/v2/pair/'+p);
+      else openUrl('https://pancakeswap.finance');
+    });
+    document.getElementById('poocoin_link').addEventListener('click',()=>{
+      const c = contractAddress();
+      if(c && c.startsWith('0x')) openUrl('https://poocoin.app/tokens/'+c);
+      else openUrl('https://poocoin.app');
+    });
+    document.getElementById('dextools_link').addEventListener('click',()=>{
+      const c = contractAddress();
+      if(c && c.startsWith('0x')) openUrl('https://www.dextools.io/app/en/bnb/pair-explorer/'+c);
+      else openUrl('https://www.dextools.io');
+    });
+
+    // Contact form: simple client-side mailto fallback.
+    function onContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value || '';
+      const email = document.getElementById('email').value || '';
+      const message = document.getElementById('message').value || '';
+      if(!message){ document.getElementById('contact_result').textContent = 'لطفاً پیام را وارد کنید.'; return false; }
+      // Try to open user's mail client as fallback
+      const subject = encodeURIComponent('Contact from BRICS website: ' + (name || 'Anonymous'));
+      const body = encodeURIComponent('Name: '+name + '\nEmail: '+email+'\n\nMessage:\n'+message);
+      const mailto = 'mailto:contact@yourdomain.tld?subject='+subject+'&body='+body;
+      window.location = mailto;
+      document.getElementById('contact_result').textContent = 'با توجه به تنظیمات مرورگر شما، پنجره ایمیل باز می‌شود.';
+      return false;
+    }
+
+    document.getElementById('clear').addEventListener('click',()=>{
+      document.getElementById('name').value='';document.getElementById('email').value='';document.getElementById('message').value='';document.getElementById('contact_result').textContent='';
+    });
+
+    // Initialize displays
+    document.getElementById('contract_display').textContent = DEFAULT_CONTRACT;
+  </script>
 </body>
 </html>
